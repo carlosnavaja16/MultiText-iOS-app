@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XMz-fw-t3b">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Contacts-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Select Contacts" id="BYZ-38-t0r" customClass="ContactSelectionViewController" customModule="Multitext0_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Wx0-TI-Xuq">
+                                <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wx0-TI-Xuq" id="btC-23-Ukn">
+                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="1.1920928955078125e-07"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xQM-np-l9e">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="Search Contacts" id="nWH-3X-J0c">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pts-tE-2vP">
+                                        <rect key="frame" x="0.0" y="56" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="btg-3h-PNh"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <state key="normal" title=" Select all" image="square.on.square" catalog="system">
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="SelectAllTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qg1-dq-Rxi"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MeO-Xc-ZVq">
+                                        <rect key="frame" x="0.0" y="106" width="414" height="616"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ONO-YR-7vw">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ONO-YR-7vw" id="e9a-IT-SCS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xQM-np-l9e" secondAttribute="bottom" id="2zt-iX-vAh"/>
+                            <constraint firstItem="xQM-np-l9e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="78X-Az-DR4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xQM-np-l9e" secondAttribute="trailing" id="mcL-SV-R2K"/>
+                            <constraint firstItem="xQM-np-l9e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qU7-6f-gX7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Contacts" id="lDv-ee-dje">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="ubU-dS-H5s">
+                            <connections>
+                                <action selector="didPressCompose:" destination="BYZ-38-t0r" id="Pxh-GK-Kaw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="SelectAllButton" destination="pts-tE-2vP" id="uHu-9C-3d4"/>
+                        <outlet property="contactsTable" destination="MeO-Xc-ZVq" id="qvn-YX-ss2"/>
+                        <outlet property="searchBar" destination="nWH-3X-J0c" id="uSF-pD-EoF"/>
+                        <segue destination="2F2-ii-wAD" kind="show" identifier="contactsToComposition" id="Gei-6J-xLd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gMl-20-udn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XMz-fw-t3b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="eOl-Tk-CHu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HBh-R6-dxX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bP7-WS-YEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--Compose Message-->
+        <scene sceneID="1hn-OU-jum">
+            <objects>
+                <viewController id="2F2-ii-wAD" customClass="MessageCompositionViewController" customModule="Multitext0_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QkT-LB-hBl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DMJ-r7-DSZ">
+                                <rect key="frame" x="20" y="160" width="374" height="253.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 contacts selected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6N-Gs-hDc">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Viq-bJ-6TU">
+                                        <rect key="frame" x="0.0" y="41.5" width="374" height="150"/>
+                                        <color key="backgroundColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="yde-dS-hw6"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xyg-Ko-rRK">
+                                        <rect key="frame" x="0.0" y="211.5" width="374" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xn5-U0-1hY">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="{firstName}"/>
+                                                <connections>
+                                                    <action selector="firstNamePressed:" destination="2F2-ii-wAD" eventType="touchUpInside" id="4kz-by-020"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk2-z6-131">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="{lastName}"/>
+                                                <connections>
+                                                    <action selector="lastNamePressed:" destination="2F2-ii-wAD" eventType="touchUpInside" id="GXL-SD-kCQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DMJ-r7-DSZ" firstAttribute="top" secondItem="Rnz-Ec-af9" secondAttribute="top" constant="20" id="EpW-3n-o7q"/>
+                            <constraint firstAttribute="trailing" secondItem="DMJ-r7-DSZ" secondAttribute="trailing" constant="20" id="f7K-Hd-qZf"/>
+                            <constraint firstItem="DMJ-r7-DSZ" firstAttribute="leading" secondItem="Rnz-Ec-af9" secondAttribute="leading" constant="20" id="fyP-0I-mUB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rnz-Ec-af9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Compose Message" id="8yf-KP-3cu" customClass="Me">
+                        <barButtonItem key="backBarButtonItem" title="Select Contacts" id="4zH-tZ-YgM">
+                            <connections>
+                                <action selector="didPressBack:" destination="2F2-ii-wAD" id="JR2-Jw-EUI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="paperplane" catalog="system" style="plain" id="QUf-uj-jiQ">
+                            <connections>
+                                <action selector="sendButtonPressed:" destination="2F2-ii-wAD" id="4rK-Rg-i05"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="messageInput" destination="Viq-bJ-6TU" id="CNc-77-69S"/>
+                        <outlet property="selectedCountLabel" destination="I6N-Gs-hDc" id="YyU-Vp-rPe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzr-ZY-OYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paperplane" catalog="system" width="128" height="121"/>
+        <image name="square.on.square" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
